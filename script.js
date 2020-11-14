@@ -18,7 +18,7 @@ function displayResults(responseJson, maxResults) {
     for (let i = 0; i < responseJson.data.length & i < maxResults; i++) {
         $('.results-list').append(`<li><h3><a href="${responseJson.data[i].url}">${responseJson.data[i].fullName}</a></h3>
         <p>${responseJson.data[i].description}</p>
-        <p><a href="${responseJson.data[i].directionsUrl}">Directions to Park</a></p>
+        <p><a href="${responseJson.data[i].directionsUrl}" target="_blank">Directions to Park</a></p>
         </li>`);
     }
     $('.results').removeClass('hidden');
